@@ -1,103 +1,93 @@
 ---
-name: 🎖️ Badge Submission Issue
-about: Report and track your badge submission
+name: 🎖️ Badge Submission
+about: Submit your completed tasks for badge review
+title: "🎖️ Badge Submission - [Your Name]"
 labels: ['submission', 'pending-review']
 assignees: ['nisalgunawardhana']
 ---
 
-## 🎖️ Badge Submission Tracking
+## 🎖️ Badge Submission Form
 
-**Submitted by:** @YOUR-USERNAME  
-**Badge Level:** [Select: Beginner / Intermediate / Advanced]  
-**PR Link:** [Link to your submission PR]  
-**Submission Date:** [Date]  
-**Status:** Pending Review
+**Choose your level below, and we'll automatically apply the correct labels and assign the reviewer!**
 
 ---
 
-## 📋 Submission Summary
+## 📋 Select Your Level
 
-### Badge Level Selected
-- [ ] 🌟 Beginner (Tasks 1-3)
-- [ ] ⭐⭐ Intermediate (Tasks 4-7)
-- [ ] ⭐⭐⭐ Advanced (Tasks 8-10)
+Choose which badge you're submitting for:
 
-### Associated Pull Request
-<!-- Link to your badge submission PR -->
-- **PR Number:** #[number]
-- **PR Link:** [URL]
-- **Branch:** `submission/[level]-badge-yourname`
+- [ ] **🌟 Beginner** - Tasks 1-3 (30 min)
+- [ ] **⭐⭐ Intermediate** - Tasks 4-7 (1-2 hours)
+- [ ] **⭐⭐⭐ Advanced** - Tasks 8-10 (2-3 hours)
 
 ---
 
-## 🎯 Tasks Status
+## 📝 Submission Details
 
-### For Beginner Badge:
-- [ ] Task 1: Run Your First Workflow - ✅ Complete
-- [ ] Task 2: Understand Workflow Triggers - ✅ Complete
-- [ ] Task 3: Build and Test Locally - ✅ Complete
+**Your Name:** [Your GitHub username]
 
-### For Intermediate Badge:
-- [ ] Task 4: Create a Custom Workflow - ✅ Complete
-- [ ] Task 5: Add Environment Variables - ✅ Complete
-- [ ] Task 6: Use GitHub Secrets - ✅ Complete
-- [ ] Task 7: Matrix Testing - ✅ Complete
+**PR Link:** [Link to your pull request with submission file]
 
-### For Advanced Badge:
-- [ ] Task 8: Upload and Download Artifacts - ✅ Complete
-- [ ] Task 9: Conditional Execution - ✅ Complete
-- [ ] Task 10: Create a PR and Use Issue Templates - ✅ Complete
+**Branch Name:** [e.g., working-beginner-john]
 
----
-
-## 📸 Evidence Summary
-
-<!-- Quick summary of evidence provided -->
-
-### Evidence Provided:
-- [ ] Screenshots attached to PR
-- [ ] Workflow logs included
-- [ ] Implementation details documented
-- [ ] Code/configuration examples shown
-
----
-
-## 📝 Additional Information
-
-### Learning Outcome
-<!-- What did you learn completing these tasks? -->
-
-### Challenges Faced
-<!-- Any challenges you faced and how you overcame them? -->
-
-### Additional Context
-<!-- Any other relevant information -->
-
----
-
-## 🔍 Review Status
-
-**Current Status:** Pending Review  
-**Assigned to:** @nisalgunawardhana  
-**Labels:** `submission`, `pending-review`, `[level-label]`  
-**Expected Review Time:** 2-5 days
+**Submission File:** [e.g., .github/submissions/beginner-john.md]
 
 ---
 
 ## ✅ Submission Checklist
 
-**Before Submitting:**
-- [ ] All tasks completed
-- [ ] Evidence gathered and attached
-- [ ] PR created with badge submission template
-- [ ] PR title formatted: "🎖️ [LEVEL] Badge Submission - Your Name"
-- [ ] Labels applied: `submission`, `pending-review`, `[level]`
-- [ ] Assigned to @nisalgunawardhana
-- [ ] This tracking issue created
+Before submitting, confirm you have:
+
+- [ ] Forked the repository
+- [ ] Created a branch named `working-<level>-<name>`
+- [ ] Completed ALL tasks for your level
+- [ ] Gathered evidence (screenshots/workflow links)
+- [ ] Created submission file: `.github/submissions/<level>-<name>.md`
+- [ ] Committed and pushed to your branch
+- [ ] Created a Pull Request on GitHub
+- [ ] Linked your PR above
 
 ---
 
-## 📞 Questions or Issues?
+## 📸 Quick Evidence Summary
+
+### For Beginner:
+- Task 1: Hello World workflow running ✅
+- Task 2: Push trigger activated ✅
+- Task 3: Local tests passing ✅
+
+### For Intermediate:
+- Task 4: Custom workflow on develop ✅
+- Task 5: Environment variables in logs ✅
+- Task 6: Secrets access (masked) ✅
+- Task 7: Matrix testing (3 parallel jobs) ✅
+
+### For Advanced:
+- Task 8: Artifacts uploaded & downloaded ✅
+- Task 9: Conditional execution working ✅
+- Task 10: PR & issue with templates ✅
+
+---
+
+## 📝 Additional Notes
+
+Any questions, challenges you faced, or additional context you'd like to share:
+
+[Your notes here]
+
+---
+
+## 🤖 What Happens Next
+
+1. **Automatic** - Labels added based on your level choice
+2. **Automatic** - Assigned to @nisalgunawardhana for review
+3. **2-5 days** - Reviewer checks your evidence and work
+4. **Feedback** - If revisions needed, you'll be notified in the PR
+5. **Approval** - Badge awarded! 🏅
+
+---
+
+**Thank you for submitting! We'll review your work soon.** ✨
 
 If you have questions about your submission:
 

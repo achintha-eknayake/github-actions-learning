@@ -18,265 +18,249 @@ Welcome to your hands-on learning journey with **GitHub Actions**! This reposito
 - Students learning DevOps practices
 - Anyone interested in GitHub Actions
 
-## 📋 Prerequisites
+## 📋 Prerequisites & Setup
 
-Before starting, make sure you have:
-
+### Requirements
 - A GitHub account
-- Basic Git knowledge
-- Node.js installed (v16 or higher) for running sample apps
-- (Optional) Azure account for deployment workflows
+- Git installed locally
+- Node.js v16+ installed
+- (Optional) Azure account for deployment tasks
+
+### Quick Setup (5 minutes)
+
+1. **Fork this repository**
+   ```bash
+   # Click "Fork" button on GitHub
+   ```
+
+2. **Clone your fork**
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/github-actions-learning.git
+   cd github-actions-learning
+   ```
+
+3. **Install dependencies for sample app**
+   ```bash
+   cd sample-app
+   npm install
+   npm start
+   ```
+   Visit `http://localhost:3000` - you should see the welcome page!
+
+4. **Run tests locally**
+   ```bash
+   npm test
+   ```
+   All tests should pass ✅
 
 ---
 
-## 🏅 Digital Badges - Earn Them All!
+## 📚 Learning Content & Documentation
 
-Complete the tasks at each level to earn prestigious digital badges! 
+### 1️⃣ Start Here: Quick Start (5 minutes)
 
-### Level 1: Beginner Badge
-![Beginner Badge](images/Beginner.png)
+**Getting started immediately:**
+- Fork the repository
+- Clone: `git clone https://github.com/YOUR-USERNAME/github-actions-learning.git`
+- Install: `cd sample-app && npm install`
+- Run: `npm start` (visit http://localhost:3000)
+- Test: `npm test`
 
-**Requirements:**
-- Complete Tasks 1, 2, and 3 from [TASKS.md](TASKS.md#beginner-tasks-)
-- Submit proof (screenshots) of:
-  - ✅ Task 1: Running the Hello World workflow
-  - ✅ Task 2: Workflow triggering on push
-  - ✅ Task 3: Local tests passing
+### 2️⃣ Read Documentation (45-60 minutes)
 
-**How to Earn:** Submit a [Beginner Submission](#beginner-submission-template) via Pull Request
+Go through these in order in the `docs/` folder:
 
----
+1. [01-what-is-github-actions.md](docs/01-what-is-github-actions.md) - Concepts & basics (10 min)
+2. [02-workflow-basics.md](docs/02-workflow-basics.md) - YAML syntax & structure (15 min)
+3. [03-triggers-and-events.md](docs/03-triggers-and-events.md) - When workflows run (10 min)
+4. [04-jobs-and-steps.md](docs/04-jobs-and-steps.md) - Execution model (15 min)
+5. [05-secrets-and-env.md](docs/05-secrets-and-env.md) - Security & configuration (10 min)
+6. [06-build-and-test.md](docs/06-build-and-test.md) - CI/CD patterns (15 min)
+7. [07-deploy-to-azure.md](docs/07-deploy-to-azure.md) - Cloud deployment (10 min)
 
-### Level 2: Intermediate Badge
-![Intermediate Badge](images/Intermediate.png)
+### 3️⃣ Complete All Tasks (2-4 hours)
 
-**Requirements:**
-- Complete Tasks 4, 5, 6, and 7 from [TASKS.md](TASKS.md#intermediate-tasks-)
-- Submit proof of:
-  - ✅ Task 4: Custom workflow running
-  - ✅ Task 5: Environment variables in logs
-  - ✅ Task 6: Secret access (masked in logs)
-  - ✅ Task 7: Matrix testing with multiple Node versions
+Follow [TASKS.md](TASKS.md) for 10+ hands-on exercises organized by difficulty:
 
-**How to Earn:** Submit an [Intermediate Submission](#intermediate-submission-template) via Pull Request
+| Level | Tasks | Time | Skills |
+|-------|-------|------|--------|
+| 🌟 **Beginner** | 1-3 | 30 min | Fundamentals & basics |
+| ⭐⭐ **Intermediate** | 4-7 | 1-2 hours | Workflow creation & automation |
+| ⭐⭐⭐ **Advanced** | 8-10 | 2-3 hours | Production-ready patterns |
 
----
+### 4️⃣ Example Workflows
 
-### Level 3: Advanced Badge
-![Advanced Badge](images/Advanced.png)
+Three production-ready workflows to learn from:
 
-**Requirements:**
-- Complete Tasks 8, 9, and 10 from [TASKS.md](TASKS.md#advanced-tasks-)
-- Submit proof of:
-  - ✅ Task 8: Artifacts uploaded & downloaded
-  - ✅ Task 9: Conditional execution working
-  - ✅ Task 10: PR created with templates
-
-**How to Earn:** Submit an [Advanced Submission](#advanced-submission-template) via Pull Request
+- **[hello-world.yml](.github/workflows/hello-world.yml)** - Basic workflow, manual triggers
+- **[build-test.yml](.github/workflows/build-test.yml)** - CI/CD pipeline with matrix testing
+- **[deploy-azure-app-service.yml](.github/workflows/deploy-azure-app-service.yml)** - Production deployment
 
 ---
 
-## 📝 Submission Process
+## 🏅 Earn Digital Badges
 
-### How to Submit Your Badges
+Complete tasks at each level and submit your work to earn prestigious badges!
 
-1. **Complete Tasks**: Finish all tasks at your desired level
-2. **Gather Evidence**: Take screenshots of successful workflow runs
-3. **Create Pull Request**: Open a PR with your submission (see templates below)
-4. **Add Label**: Add `submission` label to your PR
-5. **Add Assignee**: Assign `@nisalgunawardhana` for review
-6. **Status**: Your submission will be marked as `pending-review`
-7. **Earn Badge**: Once approved, your badge is awarded! 🎉
+### 🌟 Beginner Badge
+**Complete Tasks 1-3**
+
+**Steps:**
+1. Complete all Beginner tasks in [TASKS.md](TASKS.md#beginner-tasks-)
+2. Take screenshots of successful workflow runs
+3. Fork the repo → Create branch `working-beginner-yourname`
+4. Create file `.github/submissions/beginner-yourname.md` with evidence
+5. Commit → Push → Create Pull Request
+6. Submit link via [🎖️ Badge Submission issue](.github/ISSUE_TEMPLATE/badge_submission.md) (select "Beginner")
+7. Automatic labels applied: `submission`, `beginner`, `pending-review`
+8. Auto-assigned to reviewer for approval
+
+**Proof needed:**
+- Task 1: Hello World workflow running ✅
+- Task 2: Workflow triggered by push event ✅
+- Task 3: Local tests passing with npm test ✅
 
 ---
 
-## 📋 Submission Templates
+### ⭐⭐ Intermediate Badge
+**Complete Tasks 4-7**
 
-### Beginner Submission Template
+**Steps:**
+1. Complete all Intermediate tasks in [TASKS.md](TASKS.md#intermediate-tasks-)
+2. Gather workflow execution screenshots and logs
+3. Fork the repo → Create branch `working-intermediate-yourname`
+4. Create file `.github/submissions/intermediate-yourname.md` with evidence
+5. Commit → Push → Create Pull Request
+6. Submit link via [🎖️ Badge Submission issue](.github/ISSUE_TEMPLATE/badge_submission.md) (select "Intermediate")
+7. Automatic labels applied: `submission`, `intermediate`, `pending-review`
+8. Auto-assigned to reviewer for approval
+
+**Proof needed:**
+- Task 4: Custom workflow running on develop branch ✅
+- Task 5: Environment variables displaying in logs ✅
+- Task 6: GitHub secrets access (masked in logs) ✅
+- Task 7: Matrix testing across 3 Node versions in parallel ✅
+
+---
+
+### ⭐⭐⭐ Advanced Badge
+**Complete Tasks 8-10**
+
+**Steps:**
+1. Complete all Advanced tasks in [TASKS.md](TASKS.md#advanced-tasks-)
+2. Gather comprehensive screenshots and workflow logs
+3. Fork the repo → Create branch `working-advanced-yourname`
+4. Create file `.github/submissions/advanced-yourname.md` with evidence
+5. Commit → Push → Create Pull Request
+6. Submit link via [🎖️ Badge Submission issue](.github/ISSUE_TEMPLATE/badge_submission.md) (select "Advanced")
+7. Automatic labels applied: `submission`, `advanced`, `pending-review`
+8. Auto-assigned to reviewer for approval
+
+**Proof needed:**
+- Task 8: Artifacts uploaded & downloaded between jobs ✅
+- Task 9: Conditional execution (deploy on main only) ✅
+- Task 10: PR created with template & issue using template ✅
+
+---
+
+## 🎯 Submission Process Simplified
+
+### One Simple Way to Submit
+
+1. **Fork the repo** (click Fork button)
+
+2. **Clone your fork**
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/github-actions-learning.git
+   cd github-actions-learning
+   ```
+
+3. **Create working branch** (use this naming: `working-<level>-<yourname>`)
+   ```bash
+   git checkout -b working-beginner-john
+   ```
+
+4. **Complete your tasks** from TASKS.md and gather evidence (screenshots)
+
+5. **Create submission file** in `.github/submissions/`
+   ```bash
+   # Create this folder if it doesn't exist
+   mkdir -p .github/submissions
+   
+   # Create file: beginner-john.md (for Beginner)
+   # or: intermediate-john.md (for Intermediate)
+   # or: advanced-john.md (for Advanced)
+   ```
+
+6. **Add evidence to your file** (screenshots, workflow links, etc.)
+
+7. **Commit your changes**
+   ```bash
+   git add .github/submissions/beginner-john.md
+   git commit -m "feat: add beginner badge submission"
+   git push origin working-beginner-john
+   ```
+
+8. **Create Pull Request** on GitHub with your branch
+
+9. **Submit Tracking Issue** via [🎖️ Badge Submission](https://github.com/YOUR-USERNAME/your-repo/issues/new?assignees=nisalgunawardhana&labels=submission%2Cpending-review&template=badge_submission.md&title=Badge+Submission)
+   - Select your level (Beginner/Intermediate/Advanced)
+   - Paste your PR link
+   - Labels & assignment happen automatically!
+
+**That's it!** 🎉 Automatic labels and assignment handle the rest.
+
+---
+
+## ✅ What Happens After Submission
+
+| Step | Automatic | Manual |
+|------|-----------|--------|
+| **Level Selection** | N/A | You choose in issue |
+| **Labels Added** | ✅ Auto (submission + level) | N/A |
+| **Assignment** | ✅ Auto (@nisalgunawardhana) | N/A |
+| **Review** | Manual (2-5 days) | Reviewer checks evidence |
+| **Feedback** | Comments on PR | If revisions needed |
+| **Approval** | Issue closed | Badge awarded! 🏅 |
+
+---
+
+## 📋 Submission File Template
+
+Create a simple markdown file with your evidence:
 
 ```markdown
-## 🎓 Beginner Level Badge Submission
+# Beginner Badge Submission - Your Name
 
-**Submitted by:** @YOUR-USERNAME
-**Date:** [Date]
-**Status:** Pending Review
+**Date:** January 2026
+**Status:** Submitted for Review
 
-### Tasks Completed
+## Tasks Completed
 
-- [ ] Task 1: Run Your First Workflow
-- [ ] Task 2: Understand Workflow Triggers  
-- [ ] Task 3: Build and Test Locally
+- [x] Task 1: Run Your First Workflow
+- [x] Task 2: Understand Workflow Triggers
+- [x] Task 3: Build and Test Locally
 
-### Evidence
+## Evidence
 
-#### Task 1: Hello World Workflow Execution
-[Attach screenshot of workflow running successfully]
+### Task 1: Hello World Workflow
+[Screenshot showing successful workflow run]
 
-#### Task 2: Push Trigger
-[Attach screenshot of workflow triggered by push]
+### Task 2: Push Trigger
+[Screenshot showing workflow triggered automatically on push]
 
-#### Task 3: Local Tests Passing
-[Attach screenshot of npm test output]
+### Task 3: Local Tests
+[Screenshot showing npm test output - all passing]
 
-### Notes
-[Any additional notes or challenges faced]
+## Notes
+Any challenges faced or additional context.
 
 ---
 
-**Ready for review!** ✅
+Submitted & ready for review! ✅
 ```
 
-**To Submit:**
-1. Fork this repository
-2. Create a new branch: `git checkout -b submission/beginner-badge-yourname`
-3. Create a new file: `.github/submissions/beginner-badge-YOURNAME.md`
-4. Use the template above and add your evidence
-5. Commit and push: `git push origin submission/beginner-badge-yourname`
-6. Create a Pull Request
-7. Add labels: `submission`, `beginner`, `pending-review`
-8. Assign: `@nisalgunawardhana`
-
----
-
-### Intermediate Submission Template
-
-```markdown
-## ⭐ Intermediate Level Badge Submission
-
-**Submitted by:** @YOUR-USERNAME
-**Date:** [Date]
-**Status:** Pending Review
-
-### Tasks Completed
-
-- [ ] Task 4: Create a Custom Workflow
-- [ ] Task 5: Add Environment Variables
-- [ ] Task 6: Use GitHub Secrets
-- [ ] Task 7: Matrix Testing
-
-### Evidence
-
-#### Task 4: Custom Workflow
-[Attach screenshot of custom workflow running on develop branch]
-
-**Workflow file created:** `.github/workflows/custom.yml`
-
-#### Task 5: Environment Variables
-[Attach screenshot showing environment variables in logs]
-
-#### Task 6: GitHub Secrets
-[Attach screenshot showing secret access (secret will be masked)]
-
-#### Task 7: Matrix Testing
-[Attach screenshot showing 3 parallel jobs for different Node versions]
-
-### Workflow Details
-- Branches: develop
-- Node versions tested: [list versions]
-- All tests: PASSING ✅
-
-### Notes
-[Any additional implementation details]
-
----
-
-**Ready for review!** ✅
-```
-
-**To Submit:**
-1. Fork this repository
-2. Create a new branch: `git checkout -b submission/intermediate-badge-yourname`
-3. Create a new file: `.github/submissions/intermediate-badge-YOURNAME.md`
-4. Use the template above and add your evidence
-5. Commit and push: `git push origin submission/intermediate-badge-yourname`
-6. Create a Pull Request
-7. Add labels: `submission`, `intermediate`, `pending-review`
-8. Assign: `@nisalgunawardhana`
-
----
-
-### Advanced Submission Template
-
-```markdown
-## 🏆 Advanced Level Badge Submission
-
-**Submitted by:** @YOUR-USERNAME
-**Date:** [Date]
-**Status:** Pending Review
-
-### Tasks Completed
-
-- [ ] Task 8: Upload and Download Artifacts
-- [ ] Task 9: Conditional Execution
-- [ ] Task 10: Create a PR and Use Issue Templates
-
-### Evidence
-
-#### Task 8: Artifacts
-[Attach screenshots showing:]
-- Artifact uploaded successfully
-- Artifact downloaded from Actions UI
-- Job dependencies working
-
-#### Task 9: Conditional Execution
-[Attach screenshots showing:]
-- Deployment step skipped on develop branch
-- Deployment step executed on main branch
-- Conditions evaluated correctly
-
-#### Task 10: PR with Templates
-[Provide links to:]
-- Your PR: [URL]
-- Your Issue: [URL]
-- Templates used correctly
-
-### Advanced Implementation Details
-
-**Artifacts:**
-- Upload directory: `[path]`
-- Artifact name: `[name]`
-- Download successful: ✅
-
-**Conditions:**
-- Branch-based conditions: ✅
-- Event-based conditions: ✅
-
-**Community Participation:**
-- PR created with proper template: ✅
-- Issue created using template: ✅
-
-### Notes
-[Any additional advanced techniques used]
-
----
-
-**Ready for review!** ✅
-```
-
-**To Submit:**
-1. Fork this repository
-2. Create a new branch: `git checkout -b submission/advanced-badge-yourname`
-3. Create a new file: `.github/submissions/advanced-badge-YOURNAME.md`
-4. Use the template above and add your evidence
-5. Commit and push: `git push origin submission/advanced-badge-yourname`
-6. Create a Pull Request
-7. Add labels: `submission`, `advanced`, `pending-review`
-8. Assign: `@nisalgunawardhana`
-
----
-
-## ✅ Review Criteria
-
-Your submissions will be reviewed based on:
-
-| Criteria | Beginner | Intermediate | Advanced |
-|----------|----------|--------------|----------|
-| **Tasks Completed** | 3/3 | 4/4 | 3/3 |
-| **Evidence Quality** | Clear screenshots | Detailed logs | Comprehensive documentation |
-| **Understanding** | Concepts understood | Practical implementation | Advanced techniques |
-| **Workflow Files** | N/A | Present & working | Present & optimized |
-| **Status Labels** | `submission` | `submission` | `submission` |
-| **Time to Review** | 2-3 days | 2-3 days | 3-5 days |
+That's all you need! No complex templates, just clear evidence.
 
 ---
 
@@ -284,8 +268,11 @@ Your submissions will be reviewed based on:
 
 ```
 github-actions-learning/
-├── README.md                          # You are here!
-├── TASKS.md                           # All hands-on exercises & task links
+├── README.md                          # Main guide (this file)
+├── TASKS.md                           # All learning tasks (10+)
+├── CONTRIBUTING.md                    # How to contribute
+├── LICENSE                            # MIT License
+│
 ├── docs/                              # Learning documentation
 │   ├── 01-what-is-github-actions.md
 │   ├── 02-workflow-basics.md
@@ -294,185 +281,301 @@ github-actions-learning/
 │   ├── 05-secrets-and-env.md
 │   ├── 06-build-and-test.md
 │   └── 07-deploy-to-azure.md
+│
 ├── images/                            # Digital badges
 │   ├── Beginner.png
 │   ├── Intermediate.png
 │   └── Advanced.png
+│
 ├── .github/
 │   ├── workflows/                     # Example workflows
 │   │   ├── hello-world.yml
 │   │   ├── build-test.yml
 │   │   └── deploy-azure-app-service.yml
-│   ├── submissions/                   # Badge submissions (create this folder)
-│   ├── ISSUE_TEMPLATE/                # Issue templates
+│   ├── submissions/                   # Your badge submissions go here
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── badge_submission.md        # 🎖️ Submit badge (auto-labels & assigns!)
+│   │   ├── bug_report.md              # Report bugs
+│   │   ├── feature_request.md         # Suggest improvements
+│   │   ├── documentation.md           # Improve docs
+│   │   └── question.md                # Ask questions
 │   └── PULL_REQUEST_TEMPLATE.md       # PR template
-└── sample-app/                        # Sample Node.js application
-    ├── src/
-    ├── tests/
+│
+└── sample-app/                        # Sample Node.js app
+    ├── src/server.js
+    ├── tests/server.test.js
     ├── package.json
     └── README.md
 ```
 
-## 🚦 Getting Started
+---
 
-### 1. Clone this Repository
+## 🔄 Learning & Development Workflow
 
-```bash
-git clone https://github.com/YOUR-USERNAME/github-actions-learning.git
-cd github-actions-learning
-```
+### For Self-Paced Learning
 
-### 2. Follow the Learning Path
+1. **Preparation** (5 min)
+   - Fork repository
+   - Clone to your machine
+   - Setup sample app
 
-Start with the documentation in order:
+2. **Study** (45-60 min)
+   - Read documentation in docs/ folder
+   - Understand concepts
+   - Review example workflows
 
-1. [What is GitHub Actions?](docs/01-what-is-github-actions.md)
-2. [Workflow Basics](docs/02-workflow-basics.md)
-3. [Triggers and Events](docs/03-triggers-and-events.md)
-4. [Jobs and Steps](docs/04-jobs-and-steps.md)
-5. [Secrets and Environment Variables](docs/05-secrets-and-env.md)
-6. [Build and Test](docs/06-build-and-test.md)
-7. [Deploy to Azure](docs/07-deploy-to-azure.md)
+3. **Practice** (2-4 hours)
+   - Complete TASKS.md exercises
+   - Run workflows
+   - Modify and experiment
 
-### 3. Try the Sample App
+4. **Submit** (10 min)
+   - Create submission file with evidence
+   - Push to GitHub
+   - Create PR and submit tracking issue
+   - Auto-labels and auto-assigns!
 
-```bash
-cd sample-app
-npm install
-npm start
-```
+5. **Review** (2-5 days)
+   - Reviewer checks your work
+   - Feedback if needed
+   - Badge awarded! 🏅
 
-Visit `http://localhost:3000` to see the app running.
+### For Team/Classroom Use
 
-### 4. Complete the Tasks & Earn Badges
+1. **Setup**
+   - Clone this repository to your organization
+   - Share link with team/students
 
-Check [TASKS.md](TASKS.md) for hands-on exercises and follow the submission process to earn your digital badges!
+2. **Students Fork & Learn**
+   - Each student forks the repo
+   - Creates `working-*` branch
+   - Completes tasks locally
 
-## 🔧 Example Workflows
+3. **Submit via PR**
+   - Creates submission file
+   - Opens PR on main repo
+   - Submits tracking issue with level selection
 
-This repository includes three practical workflows:
+4. **Auto-Organization**
+   - Labels apply automatically (`submission`, `beginner`/`intermediate`/`advanced`)
+   - Assignment automatic
+   - Reviewers can focus on quality
+
+5. **Feedback & Approval**
+   - Reviewer provides feedback
+   - Student makes revisions if needed
+   - Badge awarded on approval
+
+---
+
+## 🎓 Complete Task List
+
+### 🌟 Beginner Tasks (30 min total)
+
+| # | Task | Time | What You Learn |
+|-|------|------|---|
+| 1 | [Run Your First Workflow](TASKS.md#task-1-run-your-first-workflow) | 5 min | Trigger workflows manually, read logs |
+| 2 | [Understand Workflow Triggers](TASKS.md#task-2-understand-workflow-triggers) | 10 min | Automatic triggers on push |
+| 3 | [Build and Test Locally](TASKS.md#task-3-build-and-test-locally) | 15 min | Run app & tests locally |
+
+**Submit:** [🎖️ Beginner Badge Issue](.github/ISSUE_TEMPLATE/badge_submission.md) → Select "Beginner" → Auto-labels & assigns!
+
+---
+
+### ⭐⭐ Intermediate Tasks (1-2 hours total)
+
+| # | Task | Time | What You Learn |
+|-|------|------|---|
+| 4 | [Create a Custom Workflow](TASKS.md#task-4-create-a-custom-workflow) | 15 min | Build workflows from scratch |
+| 5 | [Add Environment Variables](TASKS.md#task-5-add-environment-variables) | 10 min | Configure with env vars |
+| 6 | [Use GitHub Secrets](TASKS.md#task-6-use-github-secrets) | 10 min | Handle sensitive data securely |
+| 7 | [Matrix Testing](TASKS.md#task-7-matrix-testing) | 15 min | Test multiple Node versions |
+
+**Submit:** [🎖️ Intermediate Badge Issue](.github/ISSUE_TEMPLATE/badge_submission.md) → Select "Intermediate" → Auto-labels & assigns!
+
+---
+
+### ⭐⭐⭐ Advanced Tasks (2-3 hours total)
+
+| # | Task | Time | What You Learn |
+|-|------|------|---|
+| 8 | [Upload and Download Artifacts](TASKS.md#task-8-upload-and-download-artifacts) | 20 min | Share data between jobs |
+| 9 | [Conditional Execution](TASKS.md#task-9-conditional-execution) | 15 min | Run steps conditionally |
+| 10 | [Create a PR and Use Issue Templates](TASKS.md#task-10-create-a-pr-and-use-issue-templates) | 20 min | Contribute to projects |
+
+**Submit:** [🎖️ Advanced Badge Issue](.github/ISSUE_TEMPLATE/badge_submission.md) → Select "Advanced" → Auto-labels & assigns!
+
+---
+
+### 🏆 Bonus Challenges
+
+- [Challenge 1: Deploy to Azure](TASKS.md#challenge-1-deploy-to-azure-optional) - Production deployment
+- [Challenge 2: Add Code Coverage](TASKS.md#challenge-2-add-code-coverage-reports) - Quality metrics
+- [Challenge 3: Custom Action](TASKS.md#challenge-3-create-a-custom-action) - Reusable automation
+
+---
+
+## 🔧 Example Workflows Explained
 
 ### 1. Hello World Workflow
 **File:** [.github/workflows/hello-world.yml](.github/workflows/hello-world.yml)
-- Triggers on push
-- Prints messages
-- Perfect for understanding basics
-- **Learn more:** [Task 1 - Run Your First Workflow](TASKS.md#task-1-run-your-first-workflow)
-- **Learn more:** [Task 2 - Understand Workflow Triggers](TASKS.md#task-2-understand-workflow-triggers)
+
+```yaml
+name: Hello World
+on: push
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello, GitHub Actions!"
+```
+
+**Learn:** Basic workflow structure, triggers, steps  
+**Related Tasks:** [Task 1](TASKS.md#task-1-run-your-first-workflow), [Task 2](TASKS.md#task-2-understand-workflow-triggers)
+
+---
 
 ### 2. Build & Test Workflow
 **File:** [.github/workflows/build-test.yml](.github/workflows/build-test.yml)
-- Installs dependencies
-- Runs tests
-- Checks code quality
-- Matrix testing across multiple Node versions
-- **Learn more:** [Task 3 - Build and Test Locally](TASKS.md#task-3-build-and-test-locally)
-- **Learn more:** [Task 7 - Matrix Testing](TASKS.md#task-7-matrix-testing)
 
-### 3. Deploy to Azure App Service
+Uses matrix testing across Node versions, installs dependencies, runs tests.
+
+**Learn:** Matrix strategies, dependencies, caching  
+**Related Tasks:** [Task 3](TASKS.md#task-3-build-and-test-locally), [Task 7](TASKS.md#task-7-matrix-testing)
+
+---
+
+### 3. Deploy to Azure Workflow
 **File:** [.github/workflows/deploy-azure-app-service.yml](.github/workflows/deploy-azure-app-service.yml)
-- Builds the application
-- Deploys to Azure App Service
-- Uses GitHub Secrets for credentials
-- **Learn more:** [Challenge 1 - Deploy to Azure](TASKS.md#challenge-1-deploy-to-azure-optional)
+
+Builds and deploys app to Azure App Service.
+
+**Learn:** Production deployment, secrets, conditional execution  
+**Related Tasks:** [Task 6](TASKS.md#task-6-use-github-secrets), [Challenge 1](TASKS.md#challenge-1-deploy-to-azure-optional)
 
 ---
 
-## 📚 Complete Learning Path
+## 📚 Documentation Overview
 
-### 🌟 Beginner Level (Tasks 1-3)
-Perfect for getting started with GitHub Actions basics.
+| Doc | Topics | Duration | Level |
+|-----|--------|----------|-------|
+| [01-what-is-github-actions.md](docs/01-what-is-github-actions.md) | What & why GitHub Actions | 10 min | Beginner |
+| [02-workflow-basics.md](docs/02-workflow-basics.md) | Workflow structure & YAML | 15 min | Beginner |
+| [03-triggers-and-events.md](docs/03-triggers-and-events.md) | When workflows run | 10 min | Beginner |
+| [04-jobs-and-steps.md](docs/04-jobs-and-steps.md) | Jobs, steps, runners | 15 min | Intermediate |
+| [05-secrets-and-env.md](docs/05-secrets-and-env.md) | Configuration & security | 10 min | Intermediate |
+| [06-build-and-test.md](docs/06-build-and-test.md) | CI/CD pipelines | 15 min | Intermediate |
+| [07-deploy-to-azure.md](docs/07-deploy-to-azure.md) | Azure deployment | 10 min | Advanced |
 
-| Task | Title | Difficulty | Time | Link |
-|------|-------|-----------|------|------|
-| 1 | Run Your First Workflow | ⭐ | 5 min | [Task 1](TASKS.md#task-1-run-your-first-workflow) |
-| 2 | Understand Workflow Triggers | ⭐ | 10 min | [Task 2](TASKS.md#task-2-understand-workflow-triggers) |
-| 3 | Build and Test Locally | ⭐ | 15 min | [Task 3](TASKS.md#task-3-build-and-test-locally) |
-
-**After Completion:** [Submit Beginner Badge](README.md#beginner-submission-template)
-
----
-
-### ⭐⭐ Intermediate Level (Tasks 4-7)
-Dive deeper into practical workflows and configurations.
-
-| Task | Title | Difficulty | Time | Link |
-|------|-------|-----------|------|------|
-| 4 | Create a Custom Workflow | ⭐⭐ | 15 min | [Task 4](TASKS.md#task-4-create-a-custom-workflow) |
-| 5 | Add Environment Variables | ⭐⭐ | 10 min | [Task 5](TASKS.md#task-5-add-environment-variables) |
-| 6 | Use GitHub Secrets | ⭐⭐ | 10 min | [Task 6](TASKS.md#task-6-use-github-secrets) |
-| 7 | Matrix Testing | ⭐⭐ | 15 min | [Task 7](TASKS.md#task-7-matrix-testing) |
-
-**After Completion:** [Submit Intermediate Badge](README.md#intermediate-submission-template)
+**Total Learning Time:** ~1.5 hours of documentation  
+**Total Task Time:** 3-6 hours of hands-on practice
 
 ---
 
-### ⭐⭐⭐ Advanced Level (Tasks 8-10)
-Master complex workflows and CI/CD concepts.
+## 💡 Tips for Success
 
-| Task | Title | Difficulty | Time | Link |
-|------|-------|-----------|------|------|
-| 8 | Upload and Download Artifacts | ⭐⭐⭐ | 20 min | [Task 8](TASKS.md#task-8-upload-and-download-artifacts) |
-| 9 | Conditional Execution | ⭐⭐⭐ | 15 min | [Task 9](TASKS.md#task-9-conditional-execution) |
-| 10 | Create a PR and Use Issue Templates | ⭐⭐⭐ | 20 min | [Task 10](TASKS.md#task-10-create-a-pr-and-use-issue-templates) |
+### Learning Tips
+1. **Start sequentially** - Don't skip around
+2. **Read the docs first** - Foundation matters
+3. **Run the examples** - See it in action
+4. **Modify workflows** - Experiment & break things
+5. **Read the logs** - GitHub Actions logs tell you everything
+6. **Add comments** - Document what you learn
 
-**After Completion:** [Submit Advanced Badge](README.md#advanced-submission-template)
+### Task Completion Tips
+1. **Screenshot everything** - For badge submission
+2. **Take your time** - Quality > Speed
+3. **Experiment with modifications** - "What if I..."
+4. **Get stuck?** - Create a [Question issue](.github/ISSUE_TEMPLATE/question.md)
+5. **Found a problem?** - Report [Bug report](.github/ISSUE_TEMPLATE/bug_report.md)
 
----
-
-### 🏆 Challenge Tasks (Bonus)
-
-| Challenge | Title | Level | Link |
-|-----------|-------|-------|------|
-| 1 | Deploy to Azure | Advanced | [Challenge 1](TASKS.md#challenge-1-deploy-to-azure-optional) |
-| 2 | Add Code Coverage Reports | Advanced | [Challenge 2](TASKS.md#challenge-2-add-code-coverage-reports) |
-| 3 | Create a Custom Action | Expert | [Challenge 3](TASKS.md#challenge-3-create-a-custom-action) |
-
----
-
-## 🎓 Learning Tips
-
-1. **Start Small:** Begin with the hello-world workflow
-2. **Follow Order:** Complete tasks in sequence for better understanding
-3. **Experiment:** Modify workflows and see what happens
-4. **Read Logs:** GitHub Actions logs are your best friend
-5. **Document:** Add comments to your workflow files
-6. **Share:** Help others in the community
-7. **Earn Badges:** Submit your work to get recognized!
+### Submission Tips
+1. **Create clear submission files** - Organize evidence well
+2. **Use descriptive commit messages** - Help reviewers understand
+3. **Follow branch naming** - `working-level-yourname`
+4. **Set level in issue** - Triggers auto-labels
+5. **Link your PR** - Include it in submission issue
 
 ---
 
-## 🤝 Contributing
+## 🤝 How to Contribute
 
-We welcome contributions! To contribute:
+If you find issues or have improvements:
 
-1. Fork this repository
-2. Create a new branch (`git checkout -b feature/your-feature`)
-3. Make your changes
-4. Commit your changes (`git commit -m 'Add some feature'`)
-5. Push to the branch (`git push origin feature/your-feature`)
-6. Open a Pull Request using our [PR template](.github/PULL_REQUEST_TEMPLATE.md)
+1. **Report Issues**
+   - Use [bug_report.md](.github/ISSUE_TEMPLATE/bug_report.md)
+   - Use [feature_request.md](.github/ISSUE_TEMPLATE/feature_request.md)
+   - Use [documentation.md](.github/ISSUE_TEMPLATE/documentation.md)
+
+2. **Contribute Code**
+   - Fork repository
+   - Create branch: `feature/your-feature`
+   - Make changes
+   - Create PR using [PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md)
+   - See [CONTRIBUTING.md](CONTRIBUTING.md) for details
+
+3. **Share Knowledge**
+   - Improve documentation
+   - Create clearer examples
+   - Help others in issues
 
 ---
 
-## 📝 Reporting Issues
+## 📞 Support & Questions
 
-Found a bug or have a suggestion? Use our issue templates:
+### Getting Help
 
-- 🐛 [Bug Report](.github/ISSUE_TEMPLATE/bug_report.md)
-- ✨ [Feature Request](.github/ISSUE_TEMPLATE/feature_request.md)
-- 📚 [Documentation Issue](.github/ISSUE_TEMPLATE/documentation.md)
-- ❓ [Question](.github/ISSUE_TEMPLATE/question.md)
+1. **Check Documentation** - Start with [docs/](docs/) folder
+2. **Review Examples** - Look at workflows in [.github/workflows/](.github/workflows/)
+3. **Check TASKS.md** - Find similar examples
+4. **Create Issue** - Use [question.md](.github/ISSUE_TEMPLATE/question.md) template
+5. **Contact Maintainer** - [@nisalgunawardhana](https://github.com/nisalgunawardhana)
+
+### Common Issues
+
+**Q: My workflow isn't running?**  
+A: Check the trigger event. See [03-triggers-and-events.md](docs/03-triggers-and-events.md)
+
+**Q: How do I use secrets safely?**  
+A: See [05-secrets-and-env.md](docs/05-secrets-and-env.md)
+
+**Q: How do I deploy to Azure?**  
+A: See [07-deploy-to-azure.md](docs/07-deploy-to-azure.md) and [Challenge 1](TASKS.md#challenge-1-deploy-to-azure-optional)
 
 ---
 
-## 📚 Additional Resources
+## 🎖️ Badge Submission Tracking
 
-- [GitHub Actions Documentation](https://docs.github.com/en/actions)
-- [GitHub Actions Marketplace](https://github.com/marketplace?type=actions)
-- [Azure App Service Documentation](https://docs.microsoft.com/en-us/azure/app-service/)
-- [YAML Syntax](https://yaml.org/)
-- [Shell Scripting Guide](https://www.gnu.org/software/bash/manual/)
+### Submission Flow
+
+```
+Start → Learn → Complete Tasks → Create Branch → Submit File 
+  → Push PR → Submit Issue → Auto-Labels & Assign → Review → Badge! 🏅
+```
+
+### Automatic Workflow
+
+1. **You choose level** in badge submission issue
+2. **System auto-adds labels** - `submission`, `beginner`/`intermediate`/`advanced`
+3. **System auto-assigns** - @nisalgunawardhana
+4. **Reviewer reviews** - 2-5 days
+5. **Feedback or approval** - You're notified
+6. **Badge awarded!** - Congratulations! 🎉
+
+### No Manual Labeling Needed! ✨
+
+Just select your level in the issue → Everything else is automatic!
+
+---
+
+## 📊 Repository Statistics
+
+- 📚 **7 Learning Modules** in docs/
+- 🔧 **3 Example Workflows** ready to use
+- 📝 **10+ Hands-On Tasks** organized by level
+- 💻 **Sample Node.js App** with tests
+- 📄 **Multiple Issue Templates** for contributions
+- 🎖️ **Badge System** with auto-organization
 
 ---
 
@@ -482,26 +585,20 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 🌟 Badge Wall of Fame
+## ⭐ Show Your Support
 
-Congratulations to our badge earners! 🎉
-
-<!-- Badge winners will be added here -->
-
----
-
-## 🌟 Show Your Support
-
-If you find this repository helpful, please give it a ⭐️ and share it with others!
+- ⭐ Star this repository
+- 🔀 Share with friends/colleagues
+- 📢 Tell others about it
+- 🤝 Contribute improvements
+- 💬 Provide feedback
 
 ---
 
-**Happy Learning! 🎉**
+**Ready to get started? Begin with setup above or jump to [TASKS.md](TASKS.md)!** 🚀
 
-For questions or feedback:
-1. Check the [documentation](docs/)
-2. Review [TASKS.md](TASKS.md) 
-3. Open an [issue](.github/ISSUE_TEMPLATE/question.md) 
-4. Contact [@nisalgunawardhana](https://github.com/nisalgunawardhana)
+**Questions?** Create an [❓ Question Issue](.github/ISSUE_TEMPLATE/question.md)
+
+**Happy Learning!** 🎓
 
 
