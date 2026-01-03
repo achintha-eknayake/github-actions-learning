@@ -8,6 +8,7 @@ on:
 
 jobs:
   auto-assign-and-label:
+    if: github.event.action == 'opened'
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -164,19 +165,21 @@ jobs:
           elif [[ "$labels" == *"advanced"* ]]; then
             echo "level=advanced" >> $GITHUB_OUTPUT
             echo "badge_file=Advanced.png" >> $GITHUB_OUTPUT
-          elif [[ "$body" =~ \*\*My\ Level:\*\*[[:space:]]*([a-zA-Z]+) ]]; then
+          else
             # Extract level from "**My Level:**" field if no labels
-            level="${BASH_REMATCH[1]}"
-            level_lower=$(echo "$level" | tr '[:upper:]' '[:lower:]')
-            if [[ "$level_lower" == "beginner" ]]; then
-              echo "level=beginner" >> $GITHUB_OUTPUT
-              echo "badge_file=Beginner.png" >> $GITHUB_OUTPUT
-            elif [[ "$level_lower" == "intermediate" ]]; then
-              echo "level=intermediate" >> $GITHUB_OUTPUT
-              echo "badge_file=Intermediate.png" >> $GITHUB_OUTPUT
-            elif [[ "$level_lower" == "advanced" ]]; then
-              echo "level=advanced" >> $GITHUB_OUTPUT
-              echo "badge_file=Advanced.png" >> $GITHUB_OUTPUT
+            if echo "$body" | grep -iq "My Level"; then
+              level=$(echo "$body" | grep -i "My Level" | head -1 | sed 's/.*My Level[^a-zA-Z]*\([a-zA-Z]*\).*/\1/')
+              level_lower=$(echo "$level" | tr '[:upper:]' '[:lower:]')
+              if [[ "$level_lower" == "beginner" ]]; then
+                echo "level=beginner" >> $GITHUB_OUTPUT
+                echo "badge_file=Beginner.png" >> $GITHUB_OUTPUT
+              elif [[ "$level_lower" == "intermediate" ]]; then
+                echo "level=intermediate" >> $GITHUB_OUTPUT
+                echo "badge_file=Intermediate.png" >> $GITHUB_OUTPUT
+              elif [[ "$level_lower" == "advanced" ]]; then
+                echo "level=advanced" >> $GITHUB_OUTPUT
+                echo "badge_file=Advanced.png" >> $GITHUB_OUTPUT
+              fi
             fi
           fi
 
