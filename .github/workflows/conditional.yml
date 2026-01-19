@@ -1,0 +1,22 @@
+name: Conditional Execution Workflow
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  conditional-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Always run step
+        run: echo "This step runs on every branch"
+
+      - name: Deploy (main only)
+        if: github.ref == 'refs/heads/main'
+        run: echo "Deploying to production..."
