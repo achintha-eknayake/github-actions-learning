@@ -47,7 +47,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: build-output
+          name: build-output-${{ matrix.node-version }}
           path: output.txt
       
       - name: Run tests
@@ -81,7 +81,7 @@ jobs:
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
-          name: build-output
+          name: build-output-18.x
 
       - name: Verify artifact content
         run: |
