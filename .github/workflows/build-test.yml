@@ -2,7 +2,7 @@ name: Build and Test
 
 on:
   push:
-    branches: [main, develop]
+    branches: [working/advanced-achintha-ekanayake]
     paths:
       - 'sample-app/**'
       - '.github/workflows/build-test.yml'
@@ -42,6 +42,15 @@ jobs:
       - name: Build application
         working-directory: ./sample-app
         run: npm run build
+
+      - name: Create artifact
+        run: echo "Build output" > output.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-output
+          path: output.txt
       
       - name: Run tests
         working-directory: ./sample-app
@@ -64,6 +73,25 @@ jobs:
           else
             echo "⚠️ No coverage report found"
           fi
+
+  download-artifact:
+    name: Download Artifact
+    runs-on: ubuntu-latest
+    needs: build-and-test
+
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: build-output
+
+      - name: Verify artifact content
+        run: |
+          echo "📂 Listing files:"
+          ls -l
+          echo "📄 File content:"
+          cat output.txt
+
 
   lint-check:
     name: Lint Check
