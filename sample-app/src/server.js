@@ -61,7 +61,6 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal server error' });
 });
 
-// Start server
 if (require.main === module) {
   app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
